@@ -46,6 +46,8 @@
   - 如果想使用注解来鉴权可以配置这个拦截器
     ![Alt text](./%E6%95%99%E7%A8%8B%E5%9B%BE%E7%89%87/%E9%85%8D%E7%BD%AE%E6%8B%A6%E6%88%AA%E5%99%A8%E4%BB%A5%E6%94%AF%E6%8C%81%E6%B3%A8%E8%A7%A3.png) 
 ##### 第四步 建立表对应的实体类、DAO层、Service层
+  - User表对应的实体类
+    ![Alt text](./%E6%95%99%E7%A8%8B%E5%9B%BE%E7%89%87/%E7%94%A8%E6%88%B7%E5%AE%9E%E4%BD%93%E7%B1%BB.png)
 
 ##### 第五步 建立Controller层提供Api
 
