@@ -23,7 +23,7 @@
 ##### 第一步 设计建立数据库表
   - 创建数据库
     ![Alt text](./%E6%95%99%E7%A8%8B%E5%9B%BE%E7%89%87/%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93.png)
-  - 创建表
+  - 创建表（id为主键 自增）
     ![Alt text](./%E6%95%99%E7%A8%8B%E5%9B%BE%E7%89%87/%E5%BB%BA%E8%A1%A8.png)
   - 添加了一个字段用来保存权限
     ![Alt text](./%E6%95%99%E7%A8%8B%E5%9B%BE%E7%89%87/%E6%B7%BB%E5%8A%A0%E4%BA%86%E4%B8%80%E4%B8%AA%E5%AD%97%E6%AE%B5%E7%94%A8%E6%9D%A5%E5%8C%BA%E5%88%86%E6%9D%83%E9%99%90.png)
@@ -48,6 +48,8 @@
 ##### 第四步 建立表对应的实体类、DAO层、Service层
   - User表对应的实体类
     ![Alt text](./%E6%95%99%E7%A8%8B%E5%9B%BE%E7%89%87/%E7%94%A8%E6%88%B7%E5%AE%9E%E4%BD%93%E7%B1%BB.png)
+  - 配置扫描Mapper包
+    ![Alt text](./%E6%95%99%E7%A8%8B%E5%9B%BE%E7%89%87/%E6%89%AB%E6%8F%8FMapper%E5%8C%85.png)
 
 ##### 第五步 建立Controller层提供Api
 
