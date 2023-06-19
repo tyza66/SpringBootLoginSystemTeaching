@@ -50,6 +50,8 @@
     ![Alt text](./%E6%95%99%E7%A8%8B%E5%9B%BE%E7%89%87/%E7%94%A8%E6%88%B7%E5%AE%9E%E4%BD%93%E7%B1%BB.png)
   - 配置扫描Mapper包
     ![Alt text](./%E6%95%99%E7%A8%8B%E5%9B%BE%E7%89%87/%E6%89%AB%E6%8F%8FMapper%E5%8C%85.png)
+  - 建立Dao层的UserMapper并使用注解给方法绑定SQL语句
+    ![Alt text](./%E6%95%99%E7%A8%8B%E5%9B%BE%E7%89%87/%E5%BB%BA%E7%AB%8BDao%E5%B1%82%E7%9A%84Mapper.png)
 
 ##### 第五步 建立Controller层提供Api
 
