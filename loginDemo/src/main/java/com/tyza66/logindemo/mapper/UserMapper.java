@@ -1,7 +1,10 @@
 package com.tyza66.logindemo.mapper;
 
 import com.tyza66.logindemo.pojo.User;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -22,10 +25,12 @@ public interface UserMapper {
     public List<User> selectUserByUsername(String username);
 
     //向表中插入一条数据 用来注册
-    @Select("insert into user(username,password) values(#{username},#{password})")
+    @Insert("insert into user(username,password) values(#{username},#{password})")
+    @Transactional
     public void insertUser(String username, String password);
 
     //通过用户名修改power 用于修改角色或权限
-    @Select("update user set power=#{power} where username=#{username}")
+    @Update("update user set power=#{power} where username=#{username}")
+    @Transactional
     public void updatePowerByUsername(String username, Integer power);
 }
