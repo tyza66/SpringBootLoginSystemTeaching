@@ -25,6 +25,7 @@ public class SaConfig implements StpInterface {
         switch ((String) loginId) {
             case "0":
                 list.add("all");
+                list.add("t1");
                 break;
         }
         return list;
