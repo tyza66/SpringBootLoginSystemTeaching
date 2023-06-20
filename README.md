@@ -60,10 +60,16 @@
     ![Alt text](./%E6%95%99%E7%A8%8B%E5%9B%BE%E7%89%87/Services%E5%AE%9E%E7%8E%B0%E7%B1%BB2.png)
 
 ##### 第五步 建立Controller层提供Api
-
-##### 第六步 引入鉴权框架 
+  - 创建Controller实现登录、注册、改变权限的Api第一页
+    ![Alt text](./%E6%95%99%E7%A8%8B%E5%9B%BE%E7%89%87/controller1.png)
+  - 创建Controller实现登录、注册、改变权限的Api第二页
+    ![Alt text](./%E6%95%99%E7%A8%8B%E5%9B%BE%E7%89%87/controller2.png)
+  - 创建测试用的Controller
+    ![Alt text](./%E6%95%99%E7%A8%8B%E5%9B%BE%E7%89%87/%E6%B5%8B%E8%AF%95%E7%94%A8controller.png)
 
 ##### 第七步 修改Controller层的Api逻辑实现判断登录状态、判定是否具有权限
+  - 启用登录功能
+    ![Alt text](./%E6%95%99%E7%A8%8B%E5%9B%BE%E7%89%87/%E5%90%AF%E7%94%A8%E7%99%BB%E5%BD%95%E5%8A%9F%E8%83%BD.png)
 
 ##### 第八步 编写前端页面
 
