@@ -3,8 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>没登陆就跳转</title>
+    <script src="axios.min.js"></script>
 </head>
 <body>
-
+<script>
+    axios.get("/user/if").then(function (response) {
+        console.log(response);
+        if(response.data == "ok"){
+            alert("已登录");
+        }else{
+            alert("未登录");
+            window.location.href = "./login.html";
+        }
+    }).catch(function (error) {
+        console.log(error);
+    });
+</script>
 </body>
 </html>
