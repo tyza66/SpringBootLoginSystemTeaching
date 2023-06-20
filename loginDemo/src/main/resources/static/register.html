@@ -3,8 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>注册</title>
+    <script src="axios.min.js"></script>
 </head>
 <body>
-
+    <input type="text" name="username" placeholder="用户名"><br/>
+    <input type="password" name="password" placeholder="密码"><br/>
+    <input type="button" id="register" value="注册">
+<script>
+    document.getElementById("register").onclick = function(){
+        var username = document.getElementsByName("username")[0].value;
+        var password = document.getElementsByName("password")[0].value;
+        axios.post("/user/register", {
+            username: username,
+            password: password
+        }).then(function (response) {
+            console.log(response);
+            if(response.data == "ok"){
+                alert("注册成功");
+                window.location.href = "./login.html";
+            }else{
+                alert("注册失败");
+            }
+        }).catch(function (error) {
+            console.log(error);
+        });
+    }
+</script>
 </body>
 </html>
