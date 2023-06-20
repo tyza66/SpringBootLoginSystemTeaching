@@ -45,11 +45,16 @@ public class UserController {
 
     @PostMapping("/updatePower")
     public String updatePower(@RequestBody User user) {
-        boolean updatePowerByUsername = userService.updatePowerByUsername(user.getUsername(), user.getPower());
-        if (updatePowerByUsername) {
-            return "ok";
+        boolean login = StpUtil.isLogin();//判断是否登录了 登录了就返回true 没登陆就返回false
+        if (login) {
+            boolean updatePowerByUsername = userService.updatePowerByUsername(user.getUsername(), user.getPower());
+            if (updatePowerByUsername) {
+                return "ok";
+            } else {
+                return "fail";
+            }
         } else {
-            return "fail";
+            return "nologin";
         }
     }
 }
