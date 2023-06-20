@@ -6,12 +6,28 @@
     <script src="axios.min.js"></script>
 </head>
 <body>
+    <button id="btn">修改admin用户的power值为96</button>
 <script>
+    document.getElementById("btn").onclick = function () {
+        axios.post("/user/updatePower", {
+            username: "admin",
+            power: 96
+        }).then(function (response) {
+            console.log(response);
+            if (response.data == "ok") {
+                alert("修改成功");
+            } else {
+                alert("修改失败");
+            }
+        }).catch(function (error) {
+            console.log(error);
+        });
+    }
     axios.get("/user/if").then(function (response) {
         console.log(response);
-        if(response.data == "ok"){
+        if (response.data == "ok") {
             alert("已登录");
-        }else{
+        } else {
             alert("未登录");
             window.location.href = "./login.html";
         }
