@@ -3,8 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>登录</title>
+    <script src="axios.min.js"></script>
 </head>
 <body>
+    <input type="text" name="username" placeholder="用户名"><br/>
+    <input type="password" name="password" placeholder="密码"><br/>
+    <input type="button" id="login" value="登录">
 
+<script>
+    document.getElementById("login").onclick = function(){
+        var username = document.getElementsByName("username")[0].value;
+        var password = document.getElementsByName("password")[0].value;
+        axios.post("/user/login", {
+            username: username,
+            password: password
+        }).then(function (response) {
+            console.log(response);
+            if(response.data == "ok"){
+                alert("登录成功");
+                window.location.href = "./user/if";
+            }else{
+                alert("登录失败");
+            }
+        }).catch(function (error) {
+            console.log(error);
+        });
+    }
+</script>
 </body>
 </html>
