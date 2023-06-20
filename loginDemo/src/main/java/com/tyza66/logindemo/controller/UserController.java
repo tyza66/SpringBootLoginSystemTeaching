@@ -4,10 +4,7 @@ import cn.dev33.satoken.stp.StpUtil;
 import com.tyza66.logindemo.pojo.User;
 import com.tyza66.logindemo.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * Author: tyza66
@@ -55,6 +52,16 @@ public class UserController {
             }
         } else {
             return "nologin";
+        }
+    }
+
+    @GetMapping("/if")
+    public String ifLogin() {
+        boolean login = StpUtil.isLogin();//判断是否登录了 登录了就返回true 没登陆就返回false
+        if (login) {
+            return "ok";
+        } else {
+            return "fail";
         }
     }
 }
