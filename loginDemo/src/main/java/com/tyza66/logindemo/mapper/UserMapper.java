@@ -27,10 +27,10 @@ public interface UserMapper {
     //向表中插入一条数据 用来注册
     @Insert("insert into user(username,password) values(#{username},#{password})")
     @Transactional
-    public void insertUser(String username, String password);
+    public int insertUser(String username, String password);
 
     //通过用户名修改power 用于修改角色或权限
     @Update("update user set power=#{power} where username=#{username}")
     @Transactional
-    public void updatePowerByUsername(String username, Integer power);
+    public int updatePowerByUsername(String username, Integer power);
 }
